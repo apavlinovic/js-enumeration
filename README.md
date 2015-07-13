@@ -4,24 +4,28 @@ Plays well with angular dropdowns and ng-options notation, especially when conve
 
 ## Basic Usage
 JS Enumerations requires you to define your enumeration values as an `Object` with a special `label` property that will be used for key generation.
-Although you can add as many properties to the value side of your enumeration definition, **label is required**.
+Although you can add as many properties to the value side of your enumeration definition, **label is required**. 
+
+*Note: the label property is striped of any white spaces for easier access in the code.*
 
 ```Javascript
 var cats = new Enumeration({
 	1: { label: 'Meow' },
 	2: { label: 'Peow' },
-	3: { label: 'Foow' },
+	3: { label: 'Foow Meow' }
 });
 ```
 
 The following is true for the cats enumeration:
 
 ```Javascript
-cats.Meow === 1 			// True
-cats.Peow === 2 			// True
+cats.Meow === 1 				// True
+cats.Peow === 2 				// True
+cats.FoowMeow === 3 			// True
 
-cats[1].label === "Meow"	// True
-cats[2].label === "Peow"	// True
+cats[1].label === "Meow"		// True
+cats[2].label === "Peow"		// True
+cats[3].label === "Foow Meow"	// True
 ```
 
 This is the exact structure that is created in order for the cats enumeration:
@@ -30,11 +34,11 @@ This is the exact structure that is created in order for the cats enumeration:
 {
     1: { label: 'Meow' },
     2: { label: 'Peow' },
-    3: { label: 'Foow' },
+    3: { label: 'Foow Meow' },
 
 	Meow: 1,
 	Peow: 2,
-	Foow: 3
+	FoowMeow: 3
 }
 ```
 
