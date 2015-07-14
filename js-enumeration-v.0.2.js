@@ -5,7 +5,7 @@
         for (var id in values) {
             if (values.hasOwnProperty(id)) {
                 this.setValue(id, values[id]);
-                this.setValue(capitalizeFirstLetter((values[id].label || values[id]).replace(' ', '')), parseInt(id));
+                this.setValue(convertToPascalCase(values[id].label || values[id]), parseInt(id));
             }
         }
     }
@@ -43,6 +43,13 @@
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    function convertToPascalCase(label) {
+        return label
+            .trim()
+            .split(/\s+/g)
+            .map(capitalizeFirstLetter)
+            .join('');
     }
 
     window.Enumeration = Enumeration;
