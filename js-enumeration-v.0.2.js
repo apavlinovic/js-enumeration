@@ -23,16 +23,16 @@
         for (var id in this) {
             if (this.hasOwnProperty(id) && parseInt(id)) {
                 var obj = { id: parseInt(id) };
-				
-				if(typeof this[id] === 'string') {
-					obj['label'] = this[id];
-				} else {
-					for (var key in this[id]) {
-						if (this[id].hasOwnProperty(key)) {
-							obj[key] = this[id][key];
-						}
-					}
-				}
+                
+                if(typeof this[id] === 'string') {
+                    obj['label'] = this[id];
+                } else {
+                    for (var key in this[id]) {
+                        if (this[id].hasOwnProperty(key)) {
+                            obj[key] = this[id][key];
+                        }
+                    }
+                }
                 
                 result.push(obj);
             }
