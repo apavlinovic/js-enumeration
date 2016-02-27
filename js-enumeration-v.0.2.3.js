@@ -8,8 +8,8 @@
                 this.setValue(convertToPascalCase(values[id].label || values[id]), parseInt(id));
             }
         }
-		
-		this.asList = this.toArray();
+        
+        this.asList = this.toArray();
     }
 
     Enumeration.prototype.setValue = function (id, value) {
