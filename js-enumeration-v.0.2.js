@@ -21,7 +21,7 @@
     Enumeration.prototype.toArray = function () {
         var result = [];
         for (var id in this) {
-            if (this.hasOwnProperty(id) && parseInt(id)) {
+            if (this.hasOwnProperty(id) && !isNaN(parseInt(id))) {
                 var obj = { id: parseInt(id) };
 				
 				if(typeof this[id] === 'string') {
