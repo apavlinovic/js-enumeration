@@ -4,11 +4,18 @@
     function Enumeration(values) {
         for (var id in values) {
             if (values.hasOwnProperty(id)) {
-                this.setValue(id, values[id]);
-                this.setValue(convertToPascalCase(values[id].label || values[id]), parseInt(id));
+
+                this.setValue(convertToPascalCase(id), values[id]);
+
+                if (parseInt(id)) {
+                    this.setValue(convertToPascalCase(values[id].label || values[id]), parseInt(id));
+                }
+                else {
+                    this.setValue(convertToPascalCase(values[id].label || values[id]), id);
+                }
             }
         }
-        
+
         this.asList = this.toArray();
     }
 
@@ -47,7 +54,7 @@
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
     function convertToPascalCase(label) {
-        return label
+        return new String(label)
             .trim()
             .split(/\s+/g)
             .map(capitalizeFirstLetter)
