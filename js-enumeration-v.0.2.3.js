@@ -7,7 +7,7 @@
 
                 this.setValue(convertToPascalCase(id), values[id]);
 
-                if (parseInt(id)) {
+                if (!isNaN(parseInt(id))) {
                     this.setValue(convertToPascalCase(values[id].label || values[id]), parseInt(id));
                 }
                 else {
