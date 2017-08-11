@@ -1,12 +1,12 @@
 {
   "name": "js-enumeration",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/MiroslavJelaska/js-enumeration",
   "authors": [
     "Antonio Pavlinović"
   ],
   "description": "Javascript implementation of a classic enumeration structure.",
-  "main": "js-enumeration-v.0.2.3.js",
+  "main": "js-enumeration-v.0.2.4.js",
   "keywords": [
     "enum",
     "enumeration"
