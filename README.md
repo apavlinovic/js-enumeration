@@ -42,16 +42,13 @@ This is the exact structure that is created in order for the cats enumeration:
 }
 ```
 
-
 ## Methods
-Method | Example & Explanation
-------------------- | :-------------
+Method | Example  | Explanation
+------ | ------   | -----------
 `setValue(id, value)` | `cats.setValue(13, { label: 'Lucky' })` | Tries to add the **value as id** to your Enumeration. Throws an error if you try to overwrite an existing id. Id must be a number, and value must be a `String` or an `Object` with label property `{ label: "MyAwesomeLabel" }`
 `toArray()` | `var arrayOfCats = cats.toArray()` | Converts the enumeration to an array of objects with a flat list of value properties.
 
 ## Browser compatibility
-## Browsers support <sub><sup><sub><sub>made by <a href="https://godban.github.io">godban</a></sub></sub></sup></sub>
-
 | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox (Gecko) | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/safari.png" alt="Safari" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/opera.png" alt="Opera" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
 | --------- | --------- | --------- | --------- | --------- |
 | IE9+ | 1.5 (1.8) | (Yes) | (Yes) | (Yes)
