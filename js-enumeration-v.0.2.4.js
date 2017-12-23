@@ -1,10 +1,9 @@
 (function (window) {
-    "use strict";
+    'use strict';
 
     function Enumeration(values) {
         for (var id in values) {
             if (values.hasOwnProperty(id)) {
-
                 this.setValue(convertToPascalCase(id), values[id]);
 
                 if (!isNaN(parseInt(id))) {
@@ -23,7 +22,7 @@
         if (!this[id]) {
             this[id] = value;
         } else {
-            throw new Error("Enumeration overwrite attempt ocured for id [" + id + "] and value [" + value + "]!");
+            throw new Error('Enumeration overwrite attempt ocured for id [' + id + '] and value [' + value + ']!');
         }
     };
 
@@ -32,7 +31,7 @@
         for (var id in this) {
             if (this.hasOwnProperty(id) && !isNaN(parseInt(id))) {
                 var obj = { id: parseInt(id) };
-                
+
                 if(typeof this[id] === 'string') {
                     obj['label'] = this[id];
                 } else {
@@ -42,7 +41,7 @@
                         }
                     }
                 }
-                
+
                 result.push(obj);
             }
         }
